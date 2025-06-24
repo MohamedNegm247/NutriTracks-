@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAHAB's Bits - Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    body {
+      background: url('cover.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    .search-bar {
+      width: 100%;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .cover-container {
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+    .cover-title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .btn-custom {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+    }
+    .button-container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="search-bar">
+  <form class="d-flex" role="search">
+    <input type="search" class="form-control me-2" placeholder="Search..." aria-label="Search">
+    <button class="btn btn-outline-light" type="submit">Search</button>
+  </form>
+</div>
+
+<div class="cover-container">
+  <h1 class="cover-title">Welcome to DAHAB's Bits</h1>
+  <p>Your journey to fitness starts here!</p>
+    <div class="button-container">
+    <!-- Login Form that calls the autoLogin servlet -->
+    <form action="Login.html" method="post">
+      <button type="submit" class="btn btn-primary btn-custom" id="loginBtn">Login</button>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form action="Signup.html" method="get">
+      <button type="submit" class="btn btn-success btn-custom" id="signupBtn">Sign Up</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

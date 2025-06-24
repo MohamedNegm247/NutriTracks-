@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./cover.jpg') no-repeat center center/cover;
+      filter: blur(6px);
+      z-index: -1;
+    }
+
+    .dashboard {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn-success {
+      background-color: #28a745;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .btn-success:hover {
+      background-color: #218838;
+    }
+
+    .btn-danger:hover {
+      background-color: #c82333;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="background"></div>
+<div class="dashboard">
+  <h1>Food Management</h1>
+
+  <!-- Add Food Form -->
+  <form method="post" action="food_process.jsp">
+    <h5 class="form-title">Add Food</h5>
+    <input type="text" name="name" placeholder="Food Name" required>
+    <input type="text" name="category" placeholder="Category" required>
+    <input type="text" name="protein" placeholder="protein" required>
+    <input type="text" name="carbs" placeholder="carbs" required>
+    <input type="text" name="fat" placeholder="fats" required>
+    <input type="hidden" name="formName" value="Add_food">
+    <button type="submit" class="btn-success"><i class="fas fa-plus"></i> Add Food</button>
+  </form>
+
+  <!-- Delete Food Form -->
+  <form method="post" action="food_process.jsp">
+    <h5 class="form-title">Delete Food</h5>
+    <input type="number" name="food_id" placeholder="Food ID" min="1" required>
+    <input type="hidden" name="formName" value="Delete_food">
+    <button type="submit" class="btn-danger"><i class="fas fa-trash-alt"></i> Delete Food</button>
+  </form>
+
+  <!-- Back Button -->
+  <form action="Admin.html">
+    <button type="submit" class="btn-secondary"><i class="fas fa-arrow-left"></i> Back</button>
+  </form>
+</div>
+</body>
+</html>
